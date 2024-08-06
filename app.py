@@ -1,12 +1,15 @@
-# Comment
+from flask import Flask, request, redirect
 
-import os
+app = Flask(__name__)
 
-def hello(name):
-    return f"Hello {name}!"
+@app.route('/')
+def hello():
+    return "Hello Harness!"
+
+@app.route('/redirect')
+def unsafe_redirect():
+    target = request.args.get('target', '/')
+    return redirect(target)
 
 if __name__ == '__main__':
-    user_input = input("Enter your name: ")
-    # Vulnerability: command injection by allowing user input in os.system
-    os.system(f"echo {user_input}")
-    print(hello(user_input))
+    app.run(debug=True)
