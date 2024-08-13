@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello Harness!"
+    return "Hello Captain Canary!"
 
 @app.route('/redirect')
 def unsafe_redirect():
