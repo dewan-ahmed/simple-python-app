@@ -22,7 +22,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'This issue has been automatically marked as stale due to 90 days of inactivity.'
         stale-issue-label: 'no-issue-activity'
-        days-before-stale: 90   # Number of days before marking issues as stale
+        days-before-stale: 1   # Number of days before marking issues as stale
         days-before-close: 7    # Number of days after marking as stale before closing
         close-issue-message: 'This issue has been closed due to inactivity. Please reopen if needed.'
         exempt-issue-labels: 'pinned'  # Issues with this label will not be marked as stale
